@@ -1,0 +1,11 @@
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+@addTagHelper "*, Microsoft.AspNetCore.SpaServices"
+
+<!doctype html>
+<html>
+  <head>
+    <script defer src="/dist/app.js" asp-append-version="true"></script>
+  </head>
+  <body aurelia-app="main" asp-prerender-module="render" asp-prerender-timeout=2000>
+  </body>
+</html>

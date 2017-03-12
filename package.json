@@ -1,0 +1,17 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "aspnet-webpack": "^1.0.28",
+    "aurelia-webpack-plugin": "^2.0.0-rc.1",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1",
+    "webpack-hot-middleware": "^2.17.1"
+  },
+  "dependencies": {
+    "aspnet-prerendering": "^2.0.3",
+    "aurelia-bootstrapper": "^2.1.1",
+    "jsdom": "^9.11.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
