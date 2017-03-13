@@ -3,6 +3,7 @@ const jsdom = require("jsdom");
 
 module.exports = prerendering.createServerRenderer(params => 
   new Promise((resolve, reject) => {
+    let virtualConsole = jsdom.createVirtualConsole().sendTo(console);
     jsdom.env({
       html: "<html><body aurelia-app=main></body></html>",
       scripts: ["/dist/app.js"],      
@@ -11,6 +12,7 @@ module.exports = prerendering.createServerRenderer(params =>
         FetchExternalResources: ["script"],
         ProcessExternalResources: ["script"]
       },
+      virtualConsole,
       created: (err, window) => {
         // HACK: "polyfill" missing stuff in JSDOM...
         window.SVGElement = class SVGElement extends window.Element {};

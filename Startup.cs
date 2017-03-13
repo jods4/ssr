@@ -29,8 +29,7 @@ namespace AureliaDemo
       app.UseStaticFiles();
 
       app.UseMvc(routes =>
-      {
-        routes.MapRoute("api", "api/{controller}/{action=Index}");
+      {        
         routes.MapSpaFallbackRoute("spa-fallback", new { controller = "Home", action = "Index" });
       });
     }

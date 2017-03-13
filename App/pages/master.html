@@ -1,0 +1,18 @@
+<template>
+  <h2>Master List</h2>
+  <p>Here's what the server has in store for us.</p>
+  <p>You can click any line to see the details!</p>
+  <p>Or <a route-href="route: home">go back to the boring home</a>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr repeat.for="duck of list" click.delegate="go(duck.id)">
+        <td>${duck.firstName}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>

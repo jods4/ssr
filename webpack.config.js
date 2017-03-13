@@ -20,6 +20,7 @@ module.exports = {
     rules: [
       { test: /\.html$/i, loaders: "html-loader" },
       { test: /\.ts$/i, loaders: "ts-loader" },
+      { test: /\.css$/i, loaders: "css-loader"},
     ]
   },
 

@@ -1,0 +1,19 @@
+<template>
+  <h2>Details for ${item.firstName} ${item.lastName}</h2>
+  <p>When you're done, <a route-href="route: master">go back to the list</a>!</p>
+  <form with.bind="item">
+    <div>
+      <label class="form-label">Id:</label>
+      <!-- Wanted to use <input> but it breaks in JSDOM for now, confusion between fake and real Object -->
+      <span textcontent.one-time="id"></span>
+    </div>
+    <div>
+      <label>First name:</label>
+      <span textcontent.one-time="firstName"></span>
+    </div>
+    <div>
+      <label>Last name:</label>
+      <span textcontent.one-time="lastName"></span>
+    </div>
+  </form>
+</template>

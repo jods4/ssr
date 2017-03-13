@@ -4,8 +4,24 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="stylesheet" href="/app.css">
     <script defer src="/dist/app.js" asp-append-version="true"></script>
   </head>
-  <body aurelia-app="main" asp-prerender-module="render">
+  <body aurelia-app="main">
+    <!-- Hacky "Rendered server-side" header for illustration purposes -->
+    <div class="server-side">
+      <span>What you see was rendered server-side!</span>
+      <script>
+        window.clientStart = new Promise(resolve => window.clientResolve = resolve);
+      </script>
+      <button onclick="window.clientResolve()">Start Aurelia</button>
+    </div>
+
+    <!-- Normally you'd put asp-prerender-module on the same tag as your aurelia-app,
+         but this is a hack so that I can implement the "Rendered server-side" header.
+         Setting the timeout is not required but the default of 30s is far too long.
+         If something went wrong (e.g. unknown route) I prefer to get a crash after 2s. -->
+    <div asp-prerender-module="render" asp-prerender-timeout="5000">
+    </div>
   </body>
 </html>

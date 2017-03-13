@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+
+html {  
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0 8px;
+}
+
+h1, h2 {
+  font-family: "Bungee";
+  color: #6E4D9B;
+  margin: 0;
+}
+
+h2, a {
+  color: #E82887;  
+}
+
+p {
+  color: #444;
+  margin: 0;
+}
+
+table {
+  margin-top: 12px;  
+  width: 100%;
+  border-spacing: 0;
+}
+
+th, td {
+  color: #333;
+  text-align: left;  
+  border-bottom: 1px solid #666;
+  padding: 4px;
+}
+
+td {
+  border-bottom-color: #ccc;  
+}
+
+tbody tr:hover {
+  background: #FFDEEE;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 12px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  font-weight: 600;
+}
+
+label + span {
+  display: inline-block;
+  width: 150px;
+  border-bottom: solid 1px #ccc;
+}
+
+.server-side {
+  margin: 0 -8px;
+  padding: 8px;
+  background: repeating-linear-gradient(45deg, #fff 0, #fff 15px, #FFDEEE 15px, #FFDEEE 30px);
+  border-bottom: solid 1px #E82887;
+  font-weight: bold;
+}
+
+.server-side button {
+  margin-left: 16px;
+  background: #6E4D9B;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.25) -1px -1px;
+  padding: 4px 16px;
+  border: 1px solid #533281;
+  border-radius: 4px;
+}

@@ -1,13 +1,16 @@
+import { PLATFORM } from "aurelia-framework";
+import { Router, RouterConfiguration } from "aurelia-router";
+
 export class AppViewModel {
-  time = "n/a";
+  router: Router;
 
-  activate() {
-    return this.fetchTime();
-  }
-
-  fetchTime() {
-    return fetch("/api/Time")
-      .then<any>(response => response.json())
-      .then(obj => this.time = obj.time);
+  configureRouter(config: RouterConfiguration, router: Router) {
+    this.router = router;
+    config.options.pushState = true;
+    config.map([
+      { route: '', name: 'home', moduleId: PLATFORM.moduleName('pages/home.html') },
+      { route: 'all', name: 'master', moduleId: PLATFORM.moduleName('pages/master') },
+      { route: 'item/:id', name: 'details', moduleId: PLATFORM.moduleName('pages/details') },      
+    ]);
   }
 }
