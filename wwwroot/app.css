@@ -55,10 +55,13 @@ label {
   font-weight: 600;
 }
 
-label + span {
+input {
   display: inline-block;
   width: 150px;
-  border-bottom: solid 1px #ccc;
+  margin: 4px 0;
+  padding: 4px 8px;
+  border: solid 1px #aaa;
+  border-radius: 4px;
 }
 
 .server-side {

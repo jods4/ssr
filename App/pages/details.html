@@ -4,16 +4,15 @@
   <form with.bind="item">
     <div>
       <label class="form-label">Id:</label>
-      <!-- Wanted to use <input> but it breaks in JSDOM for now, confusion between fake and real Object -->
-      <span textcontent.one-time="id"></span>
+      <input value.one-time="id">
     </div>
     <div>
       <label>First name:</label>
-      <span textcontent.one-time="firstName"></span>
+      <input value.one-time="firstName">
     </div>
     <div>
       <label>Last name:</label>
-      <span textcontent.one-time="lastName"></span>
+      <input value.one-time="lastName">
     </div>
   </form>
 </template>
